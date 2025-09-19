@@ -30,7 +30,7 @@ export default function LoginScreen({ navigation }) {
       </View>
 
       <View style={[styles.card, { backgroundColor: '#1e293b', borderWidth: 1, borderColor: '#22d3ee' }]}> 
-        <Text style={[styles.title, { color: '#22d3ee' }]}>Welcome, Belal!</Text>
+        <Text style={[styles.title, { color: '#22d3ee' }]}>Welcome, baby bois and gurls !</Text>
         <Text style={[styles.subtitle, { color: '#7dd3fc' }]}>Sign in to your personalized app</Text>
 
         <View style={styles.inputGroup}>
