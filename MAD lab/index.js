@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const heading = document.getElementById("heading");
-  const text = document.getElementById("text");
+import { registerRootComponent } from 'expo';
 
-  heading.style.color = "blue";
-  text.innerHTML += " This extra line was added by JavaScript!";
-  console.log("JS file is working ✅");
-});
+import App from './App';
+
+// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
+// It also ensures that whether you load the app in Expo Go or in a native build,
+// the environment is set up appropriately
+registerRootComponent(App);
