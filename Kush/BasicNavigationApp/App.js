@@ -1,25 +1,28 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import LoginScreen from './screens/LoginScreen';
-import HomeScreen from './screens/HomeScreen';
-import ScrollViewScreen from './screens/ScrollViewScreen';
-import FlatListScreen from './screens/FlatListScreen';
-import RoutePropScreen from './screens/RoutePropScreen';
-
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import LoginScreen from "./screen/LoginScreen";
+import HomePage from "./screen/HomePage";
+import ScrollViewScreen from "./screen/ScrollViewScreen";
+import { FlatList } from "react-native-gesture-handler";
+import FlatListScreen from "./screen/FlatListScreen";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="ScrollViewScreen" component={ScrollViewScreen} options={{ title: 'Scroll View' }} />
-        <Stack.Screen name="FlatListScreen" component={FlatListScreen} options={{ title: 'Flat List' }} />
-        <Stack.Screen name="RoutePropScreen" component={RoutePropScreen} options={{ title: 'Route Props' }} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Home">
+                <Stack.Screen name="Home" component={HomePage} />
+                <Stack.Screen name="Login" component={LoginScreen} />
+                <Stack.Screen
+                    name="Scroll View Screen"
+                    component={ScrollViewScreen}
+                />
+                <Stack.Screen
+                    name="Flat View Screen"
+                    component={FlatListScreen}
+                />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
-
