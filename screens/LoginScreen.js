@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   StyleSheet,
   Alert,
-  Image,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -30,11 +29,6 @@ export default function LoginScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Image
-        source={require("../assets/header.png")}
-        style={styles.headerImage}
-        resizeMode="contain"
-      />
       <Text style={styles.title}>Login</Text>
       <TextInput
         style={styles.input}
@@ -63,31 +57,28 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 20,
-    backgroundColor: "#000",
-  },
-  headerImage: {
-    width: "100%",
-    height: 100,
-    marginBottom: 20,
+    backgroundColor: "#ffffffff",
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 20,
-    color: "#fff",
+    color: "#000000ff",
   },
   input: {
     height: 40,
-    borderColor: "#555",
+    borderColor: "#ffffff12",
     borderWidth: 1,
-    marginBottom: 10,
+    marginBottom: 15,
     paddingHorizontal: 10,
-    backgroundColor: "#333",
-    color: "#fff",
+    backgroundColor: "#ffffffff",
+    color: "#010000ff",
+    borderColor: "#e1e7ed5a",
+    borderRadius: 10,
   },
   button: {
-    backgroundColor: "#007bff",
+    backgroundColor: "#01152aff",
     padding: 10,
     alignItems: "center",
     borderRadius: 5,
